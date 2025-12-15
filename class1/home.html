@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><label for=""></label>
+    <input type="number" id="number"><br>
+    <button onclick="a()">Submit</button>
+    <label for="" id="result">No Result</label>
+
+    <script>
+        function a() {
+            let number = document.getElementById("number").value;
+            let p = Number.parseInt(number);
+
+            if (p % 2 ==0){
+                document.getElementById("result").innerHTML= "even";
+
+            } else{
+                document.getElementById("result").innerHTML= "odd";
+            }
+
+        }
+    </script>
+</body>
+</html>

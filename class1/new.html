@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Name</label>
+    <input type="text" id="name"><br>
+    <button onclick="n()">Done</button><br>
+    <label for="" id="h">Enter Your Name</label>
+
+    <script>
+        function n() {
+            let name = document.getElementById("name").value;
+
+           document.getElementById("h").innerHTML = "Hello "+ name;
+
+        }
+    </script>
+
+
+
+</body>
+</html>

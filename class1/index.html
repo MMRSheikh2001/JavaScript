@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Number</label>
+    <input type="number" id="number"><br>
+    <button onclick="checkOddEven()">Check</button><br><br>
+    <label for="" id="result"> No Result</label>
+
+    <script>
+        function checkOddEven() {
+            let number = document.getElementById("number").value;
+
+            let proceedNumber = Number.parseInt(number);
+
+            if (proceedNumber % 2 == 0 ){
+                document.getElementById("result").innerHTML = "<strong>Even</strong>";
+
+            }else {
+                document.getElementById("result").innerHTML = "<strong>Odd</strong>";
+
+            }
+            
+        }
+    </script>
+</body>
+</html>
