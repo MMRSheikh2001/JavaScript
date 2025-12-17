@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Name</label>
+    <input type="text" id="name"><br>
+
+    <button onclick="ninput">Check</button> <br><br>
+    <span id="noutput"></span>
+    
+
+
+
+
+
+
+    <script>
+        function ninput() {
+            let name = document.getElementById("name").value;
+            if (name == "mahbub") {
+                document.getElementById("noutput").innerHTML = ""
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>

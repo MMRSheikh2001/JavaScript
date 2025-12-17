@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Name</label>
+    <input type="text" id="name"><br>
+
+    <button onclick="ninput()">Check</button> <br><br>
+    <span  id="noutput"></span>
+    <div id="ncorrect" style="display: none;">
+        <label for="">Password</label>
+        <input type="password" id="password"><br><br>
+
+        <button onclick="pinput()">Submit</button><br><br>
+        <span id="poutput"></span>
+    </div>
+
+
+
+
+
+
+    <script>
+        function ninput() {
+            let name = document.getElementById("name").value;
+            if (name == "mahbub") {
+                ncorrect.style.display= "block";
+                noutput.style.display= "none";
+            }  else {
+                document.getElementById("noutput").innerHTML = "You are not mahbub";
+                document.getElementById("noutput").style.color = "red";
+
+        }
+    }
+
+
+    function pinput() {
+        let name = document.getElementById("name").value;
+        let password = document.getElementById("password").value;
+
+        if(name == "mahbub" && password == "123456") {
+            document.getElementById("poutput").innerHTML = "Welcome, Mahbub";
+                document.getElementById("poutput").style.color = "green";
+
+        }  else {
+                document.getElementById("poutput").innerHTML = "Password Incorrect";
+                document.getElementById("poutput").style.color = "red";
+
+        }
+
+    }
+    </script>
+
+</body>
+</html>
