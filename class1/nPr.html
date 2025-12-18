@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nPr</title>
+</head>
+<body>
+    <script>
+        let n = prompt("Enter Total numbers of permutaion");
+        let p = prompt("Enter Total times of Permutaion");
+        let r = n - p ;
+        let rn = 1;
+        let rr = 1;
+        for(let i = 1; i<= n; i++) {
+            rn = rn * i ;
+        }
+        for(let j = 1; j<= r; j++) {
+            rr = rr * j ;
+        }
+        let m = rn / rr ;
+        document.writeln(m);
+
+    </script>
+</body>
+</html>
