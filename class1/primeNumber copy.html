@@ -10,14 +10,14 @@
         let userInput = prompt("Enter Number");
         let counter = 0;
 
-        for (let i =1; i<= userInput; i++){
+        for (let i =2; i<= userInput; i++){
 
             if (userInput % i == 0) {
                 counter = counter + 1;
             }
         }
 
-        if(counter == 2){
+        if(counter == 1){
             document.writeln("It is prime number");
         } else {
             document.writeln("It is not prime number");
