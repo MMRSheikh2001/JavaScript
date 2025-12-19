@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Series</title>
+</head>
+<body>
+    <script>
+        let userInput = Number.parseInt(prompt("Give the number of fibonacci series number you want"));
+        if (userInput <= 0 ) {
+            document.writeln("Invalid Number");
+        }
+        if (userInput == 1 ) {
+            document.writeln(0);
+        }
+        if (userInput == 2 ) {
+            document.writeln(0 + ", " +1);
+        }
+        if (userInput >= 3 ) {
+
+            let i = 0 ;
+            let j = 1 ;
+            document.writeln("0 , 1 , ")
+            
+            for(let counter = 3 ; counter <= userInput ; counter++)
+        {  
+           
+            
+            let k = i + j;
+             i =j ;
+             j = k;
+            
+            // let temp = s;
+            // let s = j;
+            // let j = temp ;
+
+             document.writeln( k +" ," )  ;
+            
+          
+        }
+
+       
+        
+
+       }
+        
+    </script>
+</body>
+</html>
