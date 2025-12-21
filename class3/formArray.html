@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let userName = prompt("Give Username");
+     
+
+
+        let userNames = ["Mahbub", "Sabbir", "Badrul", "Shimul", "Hasan", "Mishkat", "Tanvir", "Jui", "Sadia", "Emon", "Rehana", "sajin"];
+   
+   
+        let passwords = ["Mahbub1", "Sabbir2", "Badrul3", "Shimul4", "Hasan5", "Mishkat6", "Tanvir7", "Jui8", "Sadia9", "Emon10", "Rehana11", "sajin12"];
+        let found = false;
+
+        for(let index = 0; index < userNames.length ; index++) {
+
+            if(userNames[index].toLowerCase() == userName.toLowerCase()) {
+                found = true;
+                   let password = prompt("Give Password");
+                   if(password == passwords[index]){
+
+                    document.writeln("welcome " + userName);
+                    break ;
+                   }
+                   else {
+                    document.writeln("Incorrect Password");
+                    break;
+                   }
+
+            }
+        }
+        if(!found){
+            document.writeln("User Name Not found");
+        }
+
+</script>
+</body>
+
+</html>
