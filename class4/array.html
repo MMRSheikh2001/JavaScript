@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arraySize = prompt("Array Size?");
+        let myArray = [];
+
+        for(let index = 0; index < arraySize; index++){
+            let arryItem = prompt("Input Array Item for" + (index+1));
+            myArray[index] = arryItem;
+
+        }
+        document.writeln(myArray);
+    </script>
+</body>
+</html>

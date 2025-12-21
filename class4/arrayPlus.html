@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         let arraySize = prompt("Array Size?");
+        let myArray = [];
+        let sum = 0;
+        let text = "";
+
+        for(let index = 0; index < arraySize; index++){
+            let arrayItem = prompt("Input Array Item for" + (index+1));
+            myArray[index] = arrayItem;
+          
+
+        }
+        document.writeln(myArray +"<br>");
+         for(i = 0; i < myArray.length ;i++){
+           sum = Number.parseInt(myArray[i]) + sum ;
+           text= text + myArray[i] + "+" ;
+           }
+           let newText = text.substring(0,text.length -1);
+           document.writeln(newText + "=" + sum);
+    </script>
+</body>
+</html>
