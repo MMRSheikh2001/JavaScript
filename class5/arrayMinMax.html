@@ -8,8 +8,21 @@
 <body>
     <script>
 
-        
-
+        let numbers = [12, 23,34,56,887,54,234,567,8997,325,766,5443,556];
+        let max = 0 ;
+        let min = 9999999999999999999999999;
+        for(let i = 0; i< numbers.length;i++){
+            if(max<=numbers[i]){
+                max = numbers[i];
+            }
+        }
+        document.writeln("Max Number is "+ max+ "<br>")
+        for(let i = 0; i< numbers.length;i++){
+            if(min<=numbers[i]){
+                min = numbers[i];
+            }
+        }
+         document.writeln("Min Number is "+ min+ "<br>")
     </script>
 </body>
 </html>
