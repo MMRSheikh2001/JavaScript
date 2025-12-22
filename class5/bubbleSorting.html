@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let numbers = [12, 23,34,56,887,54,234,5674 ,7, 8997,325,766,5443,556];
+        let newArray = [];
+        document.writeln(numbers+"<br>");
+
+        for(let i=o; i< numbers.length - 1; i++){
+           for(let j=0 ; j< numbers.length-1-i ; j++){
+            if(numbers[j] >= numbers[j+1]){
+
+                let temp = numbers[j];
+                numbers[j] = numbers[j+1];
+                numbers[j+1] = temp;
+            }
+           } 
+
+        }
+
+           document.writeln(numbers);
+    </script>
+</body>
+</html>
