@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+       let numberOne = prompt("Give Number 1");
+       let numberTwo = prompt("Give Number 2");
+       let numberThree = prompt("Give Number 3");
+
+       let newMaxNumber;
+       let newMinNumber
+        //min logic
+       if(numberOne <= numberTwo){
+         newMinNumber = numberOne;
+         newMaxNumber = numberTwo;
+
+         if(numberThree <= newMinNumber){
+            document.writeln("The Min number is " + numberThree + "<br>");
+         }
+         if(newMinNumber <= numberThree){
+            document.writeln("The Min number is " + newMinNumber + "<br>");
+         }
+         if(numberThree >= newMaxNumber){
+            document.writeln("The Max number is " + numberThree + "<br>");
+         }
+         if(newMaxNumber >= numberThree){
+            document.writeln("The Max number is " + newMaxNumber + "<br>");
+         }
+
+
+       }
+    </script>
+</body>
+</html>
