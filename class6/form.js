@@ -18,6 +18,9 @@ function sendForm(event){
         return;
     }
 
+    
 
 
 }
+let form = document.getElementById('regForm')
+regForm.addEventListener('submit', sendForm);
