@@ -8,37 +8,42 @@
 <body>
      <form action="">
             <br><label for="">Name</label>
-            <input type="text">
+            <input type="text" id="name"><br>
+            <span id="nameError"></span>
 
             <br><label for="">Phone Number</label>
-            <input type="number">
+            <input type="number" id="number"><br>
+            <span id="numberError"></span>
             
             <br><label for="">Email</label>
-            <input type="email">
+            <input type="email" id="email"><br>
+            <span id="emailError"></span>
 
             <br><label for="">Password</label>
-            <input type="password">
+            <input type="password" id="password"><br>
+            <span id="passwordError"></span>
 
             <br><label for="">Address</label><br>
-            <input type="text">
+            <input type="text" id="address"><br>
+            <span id="addressError"></span>
 
             <br><label for="">Gender</label>
-            <input type="radio" name="gender">Male
-            <input type="radio" name="gender">Female
-            <input type="radio" name="gender">Other
+            <input type="radio" name="gender" value="male">Male
+            <input type="radio" name="gender" value="female">Female
+            <input type="radio" name="gender" value="other">Other
 
             <br><label for="">Subject</label>
-            <select name="" id="">
+            <select name="" id="subject">
                 <option value="">--Subject--</option>
-                <option value="">Math</option>
-                <option value="">Statistics</option>
-                <option value="">CSE</option>
+                <option value="math" >Math</option>
+                <option value="statistics">Statistics</option>
+                <option value="cse">CSE</option>
             </select>
 
             <br><label for="">Hobby</label>
-            <input type="checkbox">Sleeping
-            <input type="checkbox">Coding
-            <input type="checkbox">Eating
+            <input type="checkbox" value="sleeping">Sleeping
+            <input type="checkbox" value="coding">Coding
+            <input type="checkbox" value="eating">Eating
 
            <br><br><br> <button type="submit" id="s">OK</button>
            <button type="reset" id="r">Cancel</button>
