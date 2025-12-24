@@ -1,23 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
 
         let letter = prompt("Give letter");
-        if( letter == "a" || letter == "e" || letter == "i" || letter == "o" || letter == "u" ||
-             letter == "A" || letter == "E" || letter == "I" || letter == "O" || letter == "U" 
-        ){
+
+        //this logic could work for less work
+         letter = letter.toLowerCase();
+        //end
+
+
+
+        if (letter == "a" || letter == "e" || letter == "i" || letter == "o" || letter == "u"
+        ) {
             document.writeln("It is vowel");
         }
-        else{
+        else if (letter == "b" || letter == "c" || letter == "d" || letter == "f" || letter == "g" ||
+            letter == "h" || letter == "j" || letter == "k" || letter == "l" || letter == "m" || letter == "n" || letter == "p" || letter == "q" || letter == "r" ||
+            letter == "s" || letter == "t" || letter == "v" || letter == "w" || letter == "x" || letter == "y" || letter == "z") {
             document.writeln("It is consonent");
+        }
+        else{
+            document.writeln("Invalid Character");
         }
 
     </script>
 </body>
+
 </html>
