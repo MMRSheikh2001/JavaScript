@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let unitPrice = prompt("Give 1 pen Price");
+        let unit = prompt("Give number of pen");
+
+        let totalPrice = unitPrice*unit
+
+        if(totalPrice>= 50){
+            let totalDiscount = totalPrice * 0.02;
+            totalPrice = totalPrice - totalDiscount;
+            document.writeln("Total Price is " + totalPrice);
+        } else{
+             document.writeln("Total Price is " + totalPrice);
+        }
+
+    </script>
+</body>
+</html>

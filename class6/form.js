@@ -7,6 +7,15 @@ function sendForm(event){
     let password = document.getElementById('password').value;
     let address = document.getElementById('address').value;
 
+
+    let gender = document.querySelector("input[name = 'gender']:checked")    ;
+    let subject = document.getElementById('subject').value;
+    let hobby = document.querySelectorAll("input[name = 'hobby']:checked")  ;
+
+    
+
+
+
     if (name.length == 0) {
 
         document.getElementById("nameError").innerHTML = "Name can not be empty";
