@@ -11,7 +11,7 @@ function sendData(event){
    let education = document.querySelectorAll("input[name='education']:checked");
 
    let subject = document.getElementById("subject").value;
-
+    
 
     let array = [];
 
@@ -38,7 +38,7 @@ function sendData(event){
    "DOB: " + dob +"\n" +
    "Gender: " + gender.value +"\n" + "Education: " + array +"\n" + "Subject: " + subject +"\n" + "Address: " + address;
 
-
+  
 
 
     let newWindow = window.open('', '_blank');

@@ -12,7 +12,12 @@ function sendForm(event){
     let subject = document.getElementById('subject').value;
     let hobby = document.querySelectorAll("input[name = 'hobby']:checked")  ;
 
-    
+    let hobbyValue = [];
+    for (let i=0 ; i< hobbyValue.length; i++){
+        hobbyValue.push(hobby[i].value);
+    }
+
+
 
 
 
@@ -27,7 +32,14 @@ function sendForm(event){
         return;
     }
 
-    
+
+    let output = "Name: " + name +"\n" + "Number: " + number +"\n" + 
+    "Email: " + email +"\n" + "Password: " + password +"\n" + 
+    "Address: " + address +"\n" + "Gender: " + gender.value +"\n" + 
+    "Subject: " + subject +"\n" + "Hobby: " + hobbyValue +"\n" 
+
+     let newWindow = window.open('','_blank');
+   newWindow.document.writeln("<pre>" +output + "</pre>");
 
 
 }
