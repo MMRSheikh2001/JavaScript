@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let userInput = prompt("Give the Limit of Prime Numbers series you want");
+        document.writeln("The Prime Number series is given below : <br>");
+        for(let i =2 ; i<= userInput; i++){
+            let counter = 0;
+
+            for(let j = 1 ; j<= i ; j++){
+                if(i % j == 0){
+                    counter = counter + 1;
+                }
+
+            }
+            if(counter == 2){
+                document.writeln(i + " , ")
+            }
+        }
+    </script>
+</body>
+</html>
