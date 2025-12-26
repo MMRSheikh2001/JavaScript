@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let year = prompt("Give Year");
+
+        if(year % 400 == 0){
+            document.writeln("It is Leap Year");
+
+        }
+        else if (year % 100 != 0 && year % 4 ==0){
+             document.writeln("It is Leap Year");
+        }
+        else{
+             document.writeln("It is not Leap Year");
+        }
+    </script>
+</body>
+</html>

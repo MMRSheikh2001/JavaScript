@@ -9,6 +9,7 @@
     <script>
         let userInput = prompt("Give the Limit of Prime Numbers series you want");
         document.writeln("The Prime Number series is given below : <br>");
+        let count = 0 ;
         for(let i =2 ; i<= userInput; i++){
             let counter = 0;
 
@@ -19,9 +20,13 @@
 
             }
             if(counter == 2){
-                document.writeln(i + " , ")
+                count = count+ 1;
+                document.writeln(i + " , ");
+
+                
             }
         }
+        document.writeln("<br> The Number of Prime Numbers is " + count);
     </script>
 </body>
 </html>
