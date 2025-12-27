@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Radius</label>
+    <input type="number" id="radius" oninput="calc()">
+
+    <br><label for="">Area</label>
+    <input type="number" id="area">
+
+    <br>
+    <label for="">Parameter</label>
+    <input type="number" id="parameter">
+
+    <script>
+        function calc(){
+            let radius = document.getElementById("radius").value;
+            let area = 3.1416 * radius* radius;
+            let parameter = 3.1416 * 2* radius;
+            document.getElementById("area").value = area;
+            document.getElementById("parameter").value = parameter;
+        }
+    </script>
+    
+</body>
+</html>
