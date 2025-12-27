@@ -21,7 +21,10 @@
     <label for="">Body Mass Index (BMI)</label>
     <input type="number" id="bmi"><br><br><br><br>
 
-    <input type="text" id="comment">;
+    <div style="display: none;" id="u"><h1>You are Underweight</h1></div>
+    <div style="display: none;" id="h"><h1>You are Healthy</h1></div>
+    <div style="display: none;" id="o"><h1>You are Overweight</h1></div>
+    <div style="display: none;" id="ob"><h1>You are Obese</h1></div>
 
     <script>
         function meter() {
@@ -39,23 +42,35 @@
             document.getElementById("bmi").value= bmi ;
         }
 
-        bmieva = document.getElementById("bmi").value;
+       let bmieva = document.getElementById("bmi").value;
 
         if(bmieva <18.5){
             
-            document.getElementById("comment").value = "You are Underwight";
+            document.getElementById("u").style ="display: block";
+            document.getElementById("h").style ="display: none";
+            document.getElementById("o").style ="display: none";
+            document.getElementById("ob").style ="display: none";
         }
          else if(bmieva <25){
             
-            document.getElementById("comment").value = "You are Healthy";
+            document.getElementById("h").style ="display: block";
+            document.getElementById("u").style ="display: none";
+            document.getElementById("o").style ="display: none";
+            document.getElementById("ob").style ="display: none";
         }
       else  if(bmieva <30){
             
-            document.getElementById("comment").value = "You are Overwight";
+            document.getElementById("o").style ="display: block";
+            document.getElementById("u").style ="display: none";
+            document.getElementById("h").style ="display: none";
+            document.getElementById("ob").style ="display: none";
         }
       else  if(bmieva >= 30){
            
-            document.getElementById("comment").value = "You are Obese";
+            document.getElementById("ob").style ="display: block";
+            document.getElementById("u").style ="display: none";
+            document.getElementById("h").style ="display: none";
+            document.getElementById("o").style ="display: none";
         }
 
     </script>
