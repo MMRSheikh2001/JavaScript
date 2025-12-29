@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discount Calculator </title>
+</head>
+
+<body>
+    <label for="">Amount</label>
+    <input type="number" id="amount" oninput="counting()">
+
+    <br><label for="">Discount (%)</label>
+    <input type="number" id="discount" readonly>
+
+    <br><label for="">Discount Amount</label>
+    <input type="number" id="discountAmount" readonly>
+
+    <br><label for="">Final Payment</label>
+    <input type="number" id="finalPayment" re>
+
+    <script>
+        function counting() {
+            let amount = parseInt(document.getElementById("amount").value);
+            if (amount < 100) {
+                let discount = 0;
+                document.getElementById("discount").value = discount;
+
+                let discountAmount = amount * discount / 100;
+                document.getElementById("discountAmount").value = discountAmount;
+
+                let finalPayment = amount - discountAmount;
+                document.getElementById("finalPayment").value = finalPayment;
+            }
+            else if (amount <= 300) {
+                let discount = 10;
+                document.getElementById("discount").value = discount;
+
+                let discountAmount = amount * discount / 100;
+                document.getElementById("discountAmount").value = discountAmount;
+
+                let finalPayment = amount - discountAmount;
+                document.getElementById("finalPayment").value = finalPayment;
+            }
+            else if (amount <= 700) {
+                let discount = 15;
+                document.getElementById("discount").value = discount;
+
+                let discountAmount = amount * discount / 100;
+                document.getElementById("discountAmount").value = discountAmount;
+
+                let finalPayment = amount - discountAmount;
+                document.getElementById("finalPayment").value = finalPayment;
+            }
+            else if (amount <= 1000) {
+                let discount = 20;
+                document.getElementById("discount").value = discount;
+
+                let discountAmount = amount * discount / 100;
+                document.getElementById("discountAmount").value = discountAmount;
+
+                let finalPayment = amount - discountAmount;
+                document.getElementById("finalPayment").value = finalPayment;
+            }
+            else {
+                let discount = 25;
+                document.getElementById("discount").value = discount;
+
+                let discountAmount = amount * discount / 100;
+                document.getElementById("discountAmount").value = discountAmount;
+
+                let finalPayment = amount - discountAmount;
+                document.getElementById("finalPayment").value = finalPayment;
+            }
+        }
+
+    </script>
+</body>
+
+</html>
