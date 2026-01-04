@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let j = {
+            name : "Mahbub",
+            age : 22,
+            city : "Lakshmipur",
+            id : 1294343,
+            addAgeId : function(){
+               let sum = this.age + this.id
+            }
+             
+        
+
+        };
+        document.writeln(j.name +"<br>");
+        document.writeln(j["id"]);
+
+        j.country = "Bangladesh";
+        delete j.city;
+        j.city = "Dhaka";
+        document.writeln("<br>"+ j.city);
+
+        j.addAgeId();
+        document.writeln(j.sum)
+       
+    </script>
+</body>
+</html>
