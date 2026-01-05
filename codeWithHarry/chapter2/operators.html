@@ -17,6 +17,20 @@
         document.writeln(--a);
         document.writeln(a++);
         document.writeln(++a);
+
+        let b = prompt("Give year");
+        switch (true){
+            case b % 400 == 0 :
+                alert("Its leap year");
+                break;
+            case b % 100 != 0 && b % 4 ==0 :
+                alert("Its also leap year")
+                break;
+            default :
+                alert("Its not leap year");
+                break;        
+        }
+        
     </script>
 </body>
 </html>
