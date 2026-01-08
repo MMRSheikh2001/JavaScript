@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" id="myFormas">
+        <br><label for="">Name</label>
+        <input type="text" id="name">
+        <br><label for="">Contact</label>
+        <input type="number" id="contact">
+
+        <br><label for="">Remarks</label>
+        <textarea name="" id="remarks" cols="30" rows="10"></textarea>
+        <br><label for="">Sex</label>
+        <input type="radio" name="sex" value="Male">Male
+        <input type="radio" name="sex" value="Female">Female
+
+        <br><label for="">Courses</label>
+        <input type="checkbox" name="courses" value="NT">NT
+        <input type="checkbox" name="courses" value="IAD">IAD
+        <input type="checkbox" name="courses" value="DDD">DDD
+        <input type="checkbox" name="courses" value="ESAD">ESAD
+
+        <br><label for="">Location</label>
+        <select name="" id="location">
+            <option value="Banani">Banani</option>
+            <option value="Dhanmondi">Dhanmondi</option>
+            <option value="Mirpur">Mirpur</option>
+        </select>
+        <br><br><button type="submit" >Submit</button>
+    </form>
+
+    <script>
+
+        function getFormData(event) {
+            event.preventDefault()
+            let name = document.getElementById("name").value;
+            let contact = document.getElementById("contact").value;
+            let remarks = document.getElementById("remarks").value;
+            let location = document.getElementById("location").value;
+
+            let sex = document.querySelector('input[name="sex"]:checked').value;
+            let courses = document.querySelectorAll('input[name="courses"]:checked');
+
+            let allCourses = [];
+
+            for (let i = 0; i < courses.length; i++) {
+                allCourses.push(courses[i].value);
+            }
+
+            let output = "<br> Name  is : " + name + "<br> Contact  is : " + contact +
+                "<br> Remarks   is : " + remarks + "<br> Sex  is : " + sex
+                + "<br>Course name   is : " + allCourses + "<br> Location  is : " + location
+
+            let newWindow = window.open('', '_blank');
+            newWindow.document.writeln(output);
+        }
+        let myFormas = document.getElementById("myFormas");
+        myFormas.addEventListener('submit', getFormData);
+
+    </script>
+</body>
+
+</html>
