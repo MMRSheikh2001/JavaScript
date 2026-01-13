@@ -9,6 +9,8 @@
     <script>
         let mail = prompt("Enter Email address");
         let patterm = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/ ;
+
+        
         if(patterm.test(mail)){
             document.writeln("Email Address is correct");
         } else{
