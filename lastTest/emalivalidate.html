@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email</title>
+</head>
+<body>
+    <script>
+        let email = prompt("Give Email Address");
+        let pat = /^\S+@\S+\.\S+$/
+
+        if(pat.test(email)){
+            document.writeln("Email Address is Correct");
+        } else{
+            document.writeln("Email Address is Wrong");
+        }
+    </script>
+</body>
+</html>
