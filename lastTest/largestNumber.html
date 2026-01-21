@@ -7,13 +7,21 @@
 </head>
 <body>
     <script>
-       let a = prompt("Give Number");
-       let b = prompt("Give Number");
-       let c = prompt("Give Number");
-       let d = prompt("Give Number");
-       let e = prompt("Give Number");
-
-       
+    //    let a = prompt("Give Number");
+    //    let b = prompt("Give Number");
+    //    let c = prompt("Give Number");
+    //    let d = prompt("Give Number");
+    //    let e = prompt("Give Number");
+        let numbers = [];
+       for(let i = 0;i<5;i++){
+        numbers[i] = prompt("give Number");
+       }
+       document.writeln(numbers);
+       for(i= 0; i<5;i++){
+        if(numbers[i]>= numbers[i+1]){
+            document.writeln("<br> The largest : " + numbers[i]);
+        }
+       }
     </script>
 </body>
 </html>
