@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //practice 1
+        // let obj = {
+        //     harry: 98,
+        //     rohan: 100,
+        //     Mahbub: 45
+        // }
+        // for (let i = 0; i < Object.keys(obj); i++) {
+        //     document.writeln(" The marks of " + Object.keys(obj)[i] + " are " + obj[Object.keys(obj)[i]]);
+        // }
+        // practice 3
+        let cn = 43;
+        let i = prompt("Enter Correct Number");
+        while (i != cn) {
+            i = prompt("Enter correct Number")
+        }
+        document.writeln("You win");
+
+        //practice 4
+        let avg = (x, y, z) => {
+            return (x + y + z) / 3;
+        }
+        document.writeln(avg(12, 14, 16));
+    </script>
+</body>
+
+</html>
