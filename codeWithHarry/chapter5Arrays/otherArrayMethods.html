@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let num = [12, 23, 21, 34, 43, 54, 45, 65, 46, 76, 78];
+        delete num[2];
+        document.writeln("<br>" + num.toString());
+        document.writeln("<br>" + num[2]);
+        let numa = [1, 23, 45, 6, 7];
+        let newArray = num.concat(numa);
+        document.writeln("<br>" + newArray.toString());
+        let sortedArray = newArray.sort();
+        document.writeln("<br>" + sortedArray.toString());
+
+        let slicedArray = newArray.slice(2, 6);
+        document.writeln("<br>" + slicedArray.toString());
+
+        let reversedArray = newArray.reverse();
+        document.writeln("<br>" + reversedArray.toString());
+
+        let splicedArray = newArray.splice(2);
+        document.writeln("<br>" + splicedArray.toString());
+    </script>
+</body>
+
+</html>
