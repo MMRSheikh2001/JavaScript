@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //map creates a new array unlike foreach loop
+        document.writeln("<br>");
+        let arr = [45, 23, 34, 12];
+        document.writeln("<br>" + arr);
+        let newArr = arr.map((value) => {
+            document.writeln("<br>" + Math.pow(value, 2));
+            return value * value;
+        })
+        document.writeln("<br>" + newArr);
+
+        //filter method
+        let arr2 = [12, 34, 22, 43, 45];
+        let a2 = arr2.filter((val) => {
+            return val > 25;
+        })
+        document.writeln("<br>" + a2.toString());
+
+        //reduce method
+        let arr3 = [12, 54, 34, 76, 23];
+        let a3 = arr3.reduce((n1, n2) => {
+            return n1 + n2;
+        })
+        document.writeln("<br>" + a3);
+    </script>
+</body>
+
+</html>

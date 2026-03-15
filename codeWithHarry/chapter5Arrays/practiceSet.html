@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1 ,2th question
+        let arr1 = [];
+        // let n = Number.parseInt(prompt(" Give Array Length"));
+
+        // for (let i = 0; i < n; i++) {
+        //     let p = Number.parseInt(prompt("Give Number"))
+        //     arr1.push(p);
+
+        // }
+        // document.writeln("<br>" + arr1.toString());
+
+        //2nd question
+        // let p = Number.parseInt(prompt("Give Number"))
+        // arr1.push(p);
+        // while (p != 0) {
+
+        //     arr1.push(p);
+        //     p = Number.parseInt(prompt("Give Number"))
+        // }
+        // document.writeln("<br>" + arr1.toString());
+        // 3rd question
+        let arr2 = [12, 20, 45, 34, 65, 30, 10, 60, 76, 43];
+        let newArr2 = arr2.filter((item) => {
+            return item % 10 == 0;
+        })
+        document.writeln("<br>" + newArr2.toString());
+
+        //4th question
+        let mappedArray = arr2.map((item) => {
+            return Math.pow(item, 2);
+        })
+
+        document.writeln("<br>" + mappedArray.toString());
+        //5th question
+        let num = Number.parseInt(prompt("Give Number"));
+        let arr5 = [];
+        for (let i = 1; i <= num; i++) {
+            arr5.push(i);
+        }
+        document.writeln("<br>" + arr5.toString());
+        let factorial = arr5.reduce((item1, item2) => {
+            return item1 * item2;
+        })
+        document.writeln("<br>The factorial is " + factorial);
+    </script>
+</body>
+
+</html>

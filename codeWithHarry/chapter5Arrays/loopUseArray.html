@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let num = [1, 2, 3, 45, 33, 32, 23];
+        document.writeln("<br>");
+        //for each loop
+        num.forEach((element) => {
+            document.writeln("<br>" + element * element);
+        });
+
+        //from of loop
+        let name = "mahbub";
+        let array = Array.from(name);
+        document.writeln(array)
+
+        //for of its better
+        for (let i of num) {
+            document.writeln("<br>" + i);
+        }
+
+        //for  in
+        for (let item in num) {
+            document.writeln("<br>" + num[i]);
+        }
+    </script>
+</body>
+
+</html>
