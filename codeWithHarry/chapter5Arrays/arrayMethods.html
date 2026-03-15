@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let num = [23, 43, 32, 54, 34, 65, 56, 76, 74];
+
+        document.writeln(num.toString());
+        let c = num.join("_");
+        document.writeln("<br>");
+        document.writeln(c.toString());
+        let p = num.pop();
+        document.writeln("<br>");
+        document.writeln(num.toString());
+        document.writeln("<br>" + p);
+        let e = num.push(100);// returns new array length
+        document.writeln("<br>" + e);
+        document.writeln("<br>" + num.toString());
+
+        let r = num.shift();// removes from start of array
+        document.writeln("<br>" + r);
+        let u = num.unshift(5);// returns new array length
+        document.writeln("<br>" + u);
+        document.writeln("<br>" + num.toString());
+    </script>
+</body>
+
+</html>
