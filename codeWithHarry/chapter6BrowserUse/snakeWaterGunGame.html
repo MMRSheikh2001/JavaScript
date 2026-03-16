@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //logic Mistake
+        let sign;
+        let actualSign = Math.random * 10;
+        actualSign = Math.round(actualSign);
+        if (actualSign % 3 == 0) {
+            sign = "s";
+        }
+        else if (actualSign % 3 == 1) {
+            sign = "w";
+        } else {
+            sign = "g";
+        }
+        let user = prompt("Can your sign (ex : s, w,g)");
+        user = user.toLowerCase().trim();
+        if (user == "s" || user == "w" || user == "g") {
+            if (user == sign) {
+                document.writeln("Computer Gives " + sign + "<br> It's a draw");
+            }
+            else if ((user == "s" && sign == "w") || (user == "w" && sign == "g") || (user == "g" && sign == "s")) {
+                document.writeln("Computer Gives " + sign + "<br> You Win");
+            }
+            else {
+                document.writeln("Computer Gives " + sign + "<br> You Win");
+            }
+        } else {
+            alert("Invalid Sign");
+        }
+    </script>
+</body>
+
+</html>
