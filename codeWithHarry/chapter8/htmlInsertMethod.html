@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="div1">
+        <p>This is paragraph inside div</p>
+    </div>
+    <span>This is a spanning writing</span>
+    <script>
+        let div = document.getElementById("div1");
+        div.innerHTML = "<h1>Testing</h1>"
+        let nav = document.createElement('nav');
+        nav.innerHTML = '<h3>This is createElement testing</h3>'
+        div.appendChild(nav);
+    </script>
+</body>
+
+</html>

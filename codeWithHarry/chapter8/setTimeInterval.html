@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        alert("Hello");
+        let a = setTimeout(function () {
+            alert("I am inside timeout")
+        }, 5000);
+        let b = confirm("Do you want to have 2nd alert");
+        if (b === false) {
+            clearTimeout(a)
+        }
+        let sum = (x, y, z) => {
+            document.writeln(x + y + z);
+        }
+        setTimeout(sum, 3500, 12, 23, 34)
+        // setInterval(function () {
+        //     alert("Its set Interval. Running each 3 seconds")
+        // }, 3000);
+        setInterval(sum,3500,12,45,67);
+    </script>
+</body>
+
+</html>
