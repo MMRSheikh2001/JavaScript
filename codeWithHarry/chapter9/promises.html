@@ -1,13 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
+        // let promise= new Promise(function(resolve,reject){
+        //     alert("I am alert in promise");
+        //     resolve(56);
+        // })
+        // console.log(promise);
+        let promise = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                alert("I am a 3 second interval promise");
+                resolve(true);
+                reject(new Error("I am error"))
+            }, 10000)
+        })
+        console.log(promise);
+        promise.then((value) => {
+            console.log(value)
+        })
         
     </script>
 </body>
+
 </html>

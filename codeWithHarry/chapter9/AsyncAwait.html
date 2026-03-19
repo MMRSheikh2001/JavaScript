@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        async function mahbub() {
+            let p1 = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    alert("Hey i am resolved")
+                    console.log("I am promise after 4 seconds");
+                    resolve(56);
+                }, 4000)
+            })
+            let p2 = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    alert("Hey i am resolved")
+                    console.log("I am promise after 4 seconds");
+                    resolve(56);
+                }, 4000)
+            })
+            console.log("Fetching p1")
+            let p1w = await p1;
+            console.log("Fetching p2")
+            let p2w = await p2;
+            return [p1w, p2w];
+        }
+        mahbub().then((val) => {
+            alert(val);
+        })
+    </script>
+</body>
+
+</html>
