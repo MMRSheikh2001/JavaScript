@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        async function typeWriter(text, delay = 50) {
+            for (const char of text) {
+                process.stdout.write(char);
+                await new Promise(resolve => setTimeout(resolve, delay));
+            }
+            console.log('\n[ACCESS GRANTED]');
+        }
+
+        // Usage
+        typeWriter("Initializing bypass protocol... Injecting payload...");
+
+    </script>
+</body>
+
+</html>

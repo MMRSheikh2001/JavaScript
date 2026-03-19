@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1
+        let loadscript = async (src) => {
+            let p1 = new Promise((resove, reject) => {
+                let script = document.createElement("script");
+                script.src = src;
+                script.onload = () => {
+                    resove(src);
+                }
+                document.head.append(script);
+            })
+            return p1;
+        }
+        let main2 = async () => {
+            let a = loadscript("https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js")
+            console.log(a);
+        }
+        main2();
+
+    </script>
+</body>
+
+</html>
