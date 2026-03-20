@@ -9,16 +9,26 @@
 
 <body>
     <script>
-        async function typeWriter(text, delay = 50) {
-            for (const char of text) {
-                process.stdout.write(char);
-                await new Promise(resolve => setTimeout(resolve, delay));
-            }
-            console.log('\n[ACCESS GRANTED]');
+        let delay = (ms) => {
+            return new Promise((resolve, reject) => {
+                setTimeout(resolve, ms)
+            })
         }
+        let showMessage = async () => {
+            console.log("Searching for network");
 
-        // Usage
-        typeWriter("Initializing bypass protocol... Injecting payload...");
+            await delay(3000);
+            console.log("Found Network");
+            await delay(3000);
+            console.log("Preaparing to crack password");
+            await delay(3000);
+            console.log("Password Cracking");
+            await delay(3000);
+            console.log("Password Cracked");
+            await delay(3000);
+            console.log("welcome");
+        }
+        showMessage();
 
     </script>
 </body>
