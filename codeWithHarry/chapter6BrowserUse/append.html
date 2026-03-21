@@ -18,6 +18,11 @@
         let text = document.createTextNode("Hello from Mathbub");
         now.appendChild(text);
         div.appendChild(now);
+        let rep=document.createElement("p");
+        let tex=document.createTextNode("this is paragraph");
+        rep.appendChild(tex);
+       // div.appendChild(rep);
+        div.replaceChild(rep,now);
 
     </script>
 </body>
