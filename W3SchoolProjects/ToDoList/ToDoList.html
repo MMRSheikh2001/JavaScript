@@ -9,13 +9,59 @@
 
 <body>
     <input type="text" id="task"><br>
-    <button>Add</button>
-    <hr><br>
+    <button onclick="addTask()">Add</button><br>
+    <hr>
+    <h4>All Tasks</h4><br>
     <ul id="tasks"></ul>
     <hr><br><br>
-    <button>Clear All</button>
+    <button onclick="clearALL()">Clear All</button>
 
     <script>
+        let tasks = [];
+        let displayTasks = () => {
+            let html = "";
+            for (let i = 0; i < tasks.length; i++) {
+                html += "<li>" + tasks[i] + " <button onclick='removeTask(" + i + ")'>X</button></li>";
+            }
+            document.getElementById("tasks").innerHTML = html;
+
+        }
+
+        let addTask = () => {
+            let taskInput = document.getElementById("task").value;
+            if (taskInput == "") {
+                return;
+            }
+            tasks.push(taskInput);
+            let taskField = document.getElementById("task")
+            taskField.value = "";
+            taskInput = "";
+            displayTasks();
+            saveTasks();
+
+        }
+        let clearALL = () => {
+            tasks = [];
+            saveTasks();
+            displayTasks();
+        }
+        let removeTask = (i) => {
+            tasks.splice(i, 1);
+            displayTasks();
+            saveTasks();
+
+        }
+        let saveTasks = () => {
+            localStorage.setItem("tasks", JSON.stringify(tasks));
+        }
+        let loadTasks = () => {
+            let obtained = localStorage.getItem("tasks");
+            if (obtained !== null) {
+                tasks = JSON.parse(obtained);
+            }
+        }
+        loadTasks();
+        displayTasks();
 
     </script>
 </body>
