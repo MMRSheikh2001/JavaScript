@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Using Event Listener</title>
+</head>
+
+<body>
+    <h2>Counter</h2><br><br>
+    <h3 id="count"></h3><br><br>
+    <hr>
+    <button id="btnPlus">+</button>
+    <button id="btnMinus">-</button>
+    <button id="btnReset">Reset</button>
+    <button id="btnSave">Save</button>
+    <button id="btnLoad">Load</button>
+    <script>
+
+
+
+        let count = 0;
+        let showCount = () => {
+            document.getElementById("count").innerHTML = count;
+        }
+        let increaseCount = () => {
+            count++;
+            showCount();
+        }
+        let decreaseCount = () => {
+            count--;
+            showCount();
+        }
+        let resetCount = () => {
+            count = 0;
+            showCount();
+        }
+        let saveCount = () => {
+            localStorage.setItem("count", count);
+        }
+        let loadCount = () => {
+            let saved = localStorage.getItem("count")
+            if (saved !== null) {
+                count = saved;
+                showCount();
+            }
+        }
+        document.getElementById("btnPlus").addEventListener("click", increaseCount);
+        document.getElementById("btnMinus").addEventListener("click", decreaseCount);
+        document.getElementById("btnReset").addEventListener("click", resetCount);
+        document.getElementById("btnSave").addEventListener("click", saveCount);
+        document.getElementById("btnLoad").addEventListener("click", loadCount);
+
+    </script>
+</body>
+
+</html>
