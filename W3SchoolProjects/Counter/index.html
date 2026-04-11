@@ -12,10 +12,40 @@
 
     <h4 id="counter"></h4>
     <br><br><br><br>
-    <button>+</button><button>-</button><button>Reset</button><button>Save</button><button>Load</button>
+    <button onclick="increaseCount()">+</button>
+    <button onclick="decreaseCount()">-</button>
+    <button onclick="resetCount()">Reset</button>
+    <button onclick="saveCount()">Save</button>
+    <button onclick="loadCount()">Load</button>
 
     <script>
+        let count = 0;
+        function updateCount() {
+            document.getElementById("counter").innerHTML = count;
+        }
+        function increaseCount() {
+            count++;
+            updateCount();
 
+        }
+        function decreaseCount() {
+            count--;
+            updateCount();
+        }
+        function resetCount() {
+            count = 0;
+            updateCount();
+        }
+        function saveCount() {
+            localStorage.setItem("Count", count);
+        }
+        function loadCount() {
+            let saved = localStorage.getItem("Count");
+            if (saved !== null) {
+                count = Number.parseInt(saved);
+            }
+            updateCount();
+        }
 
     </script>
 </body>
