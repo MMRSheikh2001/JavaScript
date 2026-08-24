@@ -35,11 +35,17 @@ let cart = [
     { name: "Socks", price: 150, quantity: 3 },
 ];
 
-let TotalItem = 0;
+let totalItem = 0;
 let totalBill = 0;
 
 for (let items of cart) {
 
+    totalItem += items.quantity;
+    totalBill += items.price;
+
 
 
 }
+console.log("================================================================================================");
+console.log(`${totalItem} items`);
+console.log(`Total Bill : ${totalBill} BDT`);
