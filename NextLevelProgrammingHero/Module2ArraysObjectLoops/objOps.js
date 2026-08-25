@@ -41,7 +41,7 @@ let totalBill = 0;
 for (let items of cart) {
 
     totalItem += items.quantity;
-    totalBill += items.price;
+    totalBill += ((items.price)*(items.quantity));
 
 
 
