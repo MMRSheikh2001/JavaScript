@@ -36,3 +36,43 @@ switch (true) {
         break;
 }
 
+//Question 2
+function getDayType(day) {
+    day = day.toLowerCase().trim();
+
+    switch (day) {
+        case "saturday":
+            return "Weekend";
+            break;
+        case "sunday":
+            return "Working Day";
+
+            break;
+        case "monday":
+            return "Working Day";
+
+            break;
+        case "tuesday":
+            return "Working Day";
+
+            break;
+        case "wednesday":
+            return "Working Day";
+
+            break;
+        case "thursday":
+            return "Working Day";
+
+            break;
+        case "friday":
+            return "Weekend";
+
+            break;
+
+        default:
+            return "Invalid Day";
+            break;
+    }
+
+}
+console.log(getDayType("SaturDay"));

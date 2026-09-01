@@ -18,3 +18,15 @@ console.log(typeof(name1));
 console.log(typeof(age));
 
 console.log(typeof(isOld));
+
+function describeValue(value) {
+    const type = typeof (value);
+
+    if (value) {
+        return `${type} | truthy`;
+    } else {
+        return `${type} | falsy`;
+    }
+}
+
+console.log(describeValue(""));
